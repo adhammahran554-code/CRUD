@@ -1,0 +1,143 @@
+  * {
+      margin: 0;
+      padding: 5px;
+  }
+
+  #welcomeName {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+     margin: 0;
+     text-transform: uppercase;
+     font-style: italic;
+     color: green;
+    }
+
+  body {
+      background-color: #222;
+      color: #fff;
+      font-family: system-ui;
+  }
+
+  .crud {
+      width: 80%;
+      margin: auto;
+  }
+
+  .head {
+      text-align: center;
+      text-transform: uppercase;
+  }
+
+  input {
+      width: 100%;
+      height: 30px;
+      outline: none;
+      border: none;
+      background-color: #111;
+      margin: 4px 0;
+      border-radius: 4px;
+      padding: 4px;
+      color: #fff;
+  }
+
+  input:focus {
+      background: #000;
+      transform: scale(1.1);
+
+  }
+
+  .price input {
+      width: 20%;
+  }
+
+  #total {
+      background: #a00d02;
+      padding: 5px 2px;
+      border-radius: 4px;
+  }
+
+  #total::before {
+      content: "Total: ";
+  }
+
+  button {
+      width: 100%;
+      height: 30px;
+      border: none;
+      cursor: pointer;
+      background: #390053;
+      border-radius: 20px;
+      color: #fff;
+      transition: 0.5s;
+  }
+
+  button:hover {
+      background: #51025f;
+      letter-spacing: 1px;
+  }
+
+  .btnsearch {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .btnsearch button {
+      width: 45%;
+  }
+
+  table {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+  }
+
+  table th {
+      text-transform: uppercase;
+  }
+
+  th,
+  td {
+      padding: 5px;
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .mode {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+
+      display: flex;
+      gap: 10px;
+  }
+
+  .mode button {
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      transition: transform 0.2s ease;
+  }
+
+  .mode button:hover {
+      transform: scale(1.1);
+  }
+
+  .mode button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+  }
+
+
+ #deleteAll {
+    display: none;
+ }
