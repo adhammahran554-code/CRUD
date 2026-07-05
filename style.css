@@ -1,143 +1,277 @@
-  * {
-      margin: 0;
-      padding: 5px;
-  }
 
-  #welcomeName {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-     margin: 0;
-     text-transform: uppercase;
-     font-style: italic;
-     color: green;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+    color: #fff;
+    font-family: system-ui;
+}
+
+.crud {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+
+
+#welcomeName {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    text-transform: uppercase;
+    font-style: italic;
+    color: #00c853;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+
+.head {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.head h2 {
+    margin-bottom: 10px;
+}
+
+
+
+input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background: #111;
+    color: #fff;
+    padding: 10px;
+    margin: 6px 0;
+    transition: .3s;
+}
+
+input:focus {
+    background: #000;
+    transform: scale(1.02);
+}
+
+
+.price {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.price input {
+    flex: 1;
+    min-width: 100px;
+}
+
+#total {
+    background: #a00d02;
+    padding: 10px;
+    border-radius: 5px;
+    min-width: 120px;
+    text-align: center;
+    height: 40px;
+    line-height: 20px;
+}
+
+#total::before {
+    content: "Total : ";
+}
+
+
+
+button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background: #390053;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 8px;
+}
+
+button:hover {
+    background: #51025f;
+    letter-spacing: 1px;
+}
+
+
+
+.btnsearch {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.btnsearch button {
+    width: 100%;
+}
+
+
+
+.output {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    min-width: 900px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table th {
+    text-transform: uppercase;
+    background: #111;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background: #2c2c2c;
+}
+
+tr:hover {
+    background: #333;
+}
+
+
+.mode {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 999;
+}
+
+.mode button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    padding: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .3);
+}
+
+.mode button:hover {
+    transform: scale(1.1);
+}
+
+.mode button img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+.hide {
+    display: none;
+}
+
+#deleteAll {
+    display: none;
+}
+
+
+
+@media (max-width:992px) {
+
+    .crud {
+        width: 95%;
     }
 
-  body {
-      background-color: #222;
-      color: #fff;
-      font-family: system-ui;
-  }
+    #welcomeName {
+        position: static;
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+    }
 
-  .crud {
-      width: 80%;
-      margin: auto;
-  }
-
-  .head {
-      text-align: center;
-      text-transform: uppercase;
-  }
-
-  input {
-      width: 100%;
-      height: 30px;
-      outline: none;
-      border: none;
-      background-color: #111;
-      margin: 4px 0;
-      border-radius: 4px;
-      padding: 4px;
-      color: #fff;
-  }
-
-  input:focus {
-      background: #000;
-      transform: scale(1.1);
-
-  }
-
-  .price input {
-      width: 20%;
-  }
-
-  #total {
-      background: #a00d02;
-      padding: 5px 2px;
-      border-radius: 4px;
-  }
-
-  #total::before {
-      content: "Total: ";
-  }
-
-  button {
-      width: 100%;
-      height: 30px;
-      border: none;
-      cursor: pointer;
-      background: #390053;
-      border-radius: 20px;
-      color: #fff;
-      transition: 0.5s;
-  }
-
-  button:hover {
-      background: #51025f;
-      letter-spacing: 1px;
-  }
-
-  .btnsearch {
-      display: flex;
-      justify-content: space-between;
-  }
-
-  .btnsearch button {
-      width: 45%;
-  }
-
-  table {
-      width: 100%;
-      text-align: center;
-      margin: 10px 0;
-  }
-
-  table th {
-      text-transform: uppercase;
-  }
-
-  th,
-  td {
-      padding: 5px;
-  }
-
-  .hide{
-    display: none;
-  }
-
-  .mode {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-
-      display: flex;
-      gap: 10px;
-  }
-
-  .mode button {
-      width: 45px;
-      height: 45px;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      background-color: #fff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-      transition: transform 0.2s ease;
-  }
-
-  .mode button:hover {
-      transform: scale(1.1);
-  }
-
-  .mode button img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
-  }
+}
 
 
- #deleteAll {
-    display: none;
- }
+
+@media (max-width:768px) {
+
+    .crud {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .head h2 {
+        font-size: 24px;
+    }
+
+    .head p {
+        font-size: 14px;
+    }
+
+    .price {
+        flex-direction: column;
+    }
+
+    .price input {
+        width: 100%;
+    }
+
+    #total {
+        width: 100%;
+    }
+
+    .btnsearch {
+        flex-direction: column;
+    }
+
+    .btnsearch button {
+        width: 100%;
+    }
+
+    button {
+        height: 45px;
+        font-size: 16px;
+    }
+
+    input {
+        height: 45px;
+        font-size: 16px;
+    }
+
+    input:focus {
+        transform: none;
+    }
+
+    .mode {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .mode button {
+        width: 40px;
+        height: 40px;
+    }
+
+    table {
+        min-width: 800px;
+    }
+
+}

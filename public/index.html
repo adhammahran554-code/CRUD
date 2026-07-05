@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="photo/head.png">
+    <title>CRUDS</title>
+</head>
+
+<body>
+    <div class="crud">
+        <div class="head">
+            <h1 id="welcomeName"></h1>
+            <h1>cruds</h1>
+            <p>product management system</p>
+        </div>
+        <div class="inputs">
+            <input type="text" id="title" placeholder="title" required>
+            <div class="price">
+                <input type="number" onkeyup="get_total()" id="price" placeholder="price">
+                <input type="number" onkeyup="get_total()" id="taxes" placeholder="taxes">
+                <input type="number" onkeyup="get_total()" id="ads" placeholder="ads">
+                <input type="number" onkeyup="get_total()" id="discount" placeholder="discount">
+                <small id="total">zero</small>
+            </div>
+            <input placeholder="count" type="number" id="count">
+            <input placeholder="category" type="text" id="category">
+            <button id="submit">create</button>
+        </div>
+        <div class="outputs">
+            <div class="searchBlock">
+                <input type="text" id="search" placeholder="search" onkeyup="get_search(this.value)">
+                <div class="btnsearch">
+                    <button id="searchTitle" onclick="search_data(this.id)">Search By Title</button>
+                    <button id="searchCategory" onclick="search_data(this.id)">Search By Category</button>
+
+                </div>
+            </div>
+
+            <button id="deleteAll" onclick="delete_All_data()">Delete All</button>
+
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>Total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+    <div class="mode">
+        <button id="lightmode"><img src="photo/light.jpeg"></button>
+        <button id="darkmode"><img src="photo/dark.jpg"></button>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
