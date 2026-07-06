@@ -8,9 +8,9 @@ if (name === null || name === "") {
     }
 }
 
-alert("Note: To create a project you must have a title, category, and price.");
+alert("Note: To create a project you must have a title, category, and price , and use desktop or laptop for better experience");
 
-document.getElementById("welcomeName").textContent = ` ${name}`;
+document.getElementById("welcomeName").textContent = `${name}!`;
 //reading the inputs
 let light = document.getElementById("lightmode");
 let dark = document.getElementById("darkmode");
